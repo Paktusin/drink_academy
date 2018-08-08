@@ -1,9 +1,13 @@
 <template>
     <div>
-        <Loader/>
+        <Loader v-if="!loaded"/>
+        <div v-if="!loaded" class="mainTitle neon">
+            drink academy
+        </div>
         <transition name="fade">
             <div v-show="loaded" class="App" v-bind:style="{backgroundImage:`url(${backImage})`}">
                 <img style="display: none" v-bind:src="backImage" v-on:load="imgLoad"/>
+                <img style="display: none" v-bind:src="chalk" v-on:load="imgLoad"/>
                 <div class="container">
                     <div class="row">
                         <div class="col-12">
@@ -31,6 +35,7 @@
     import dataService from "../dataService";
     import Drink from "./Drink.vue";
     import backImage from '../img/back.jpg'
+    import chalk from '../img/chalkboard-blue.jpg'
     import Loader from "./Loader.vue";
 
     export default {
@@ -39,9 +44,11 @@
         data() {
             return {
                 loaded: false,
+                images: 0,
                 neonOn: false,
                 neonBroke: false,
                 backImage,
+                chalk,
                 randomDrinks: []
             }
         },
@@ -53,16 +60,22 @@
                 return cl;
             },
             imgLoad(e) {
-                this.loaded = true;
-                setTimeout(() => {
-                    this.neonOn = true;
-                    setInterval(() => {
-                        this.neonBroke = true;
-                        setTimeout(() => {
-                            this.neonBroke = false;
-                        }, 2000);
-                    }, 5000);
-                }, 1000);
+                this.images++;
+                this.checkAllLoad();
+            },
+            checkAllLoad() {
+                if (this.images >= 2) {
+                    this.loaded = true;
+                    setTimeout(() => {
+                        this.neonOn = true;
+                        setInterval(() => {
+                            this.neonBroke = true;
+                            setTimeout(() => {
+                                this.neonBroke = false;
+                            }, 2000);
+                        }, 10000);
+                    }, 1000);
+                }
             }
         },
         beforeCreate() {
@@ -73,11 +86,11 @@
     }
 </script>
 
-<style>
+<style lang="scss">
     .mainTitle {
         font-family: 'Neon', serif;
-        font-size: 5rem;
-        line-height: 4rem;
+        font-size: 65pt;
+        line-height: 45pt;
         text-align: center;
         margin-bottom: 1.5rem;
         margin-top: 1rem;
@@ -89,5 +102,8 @@
         min-height: 100vh;
         display: flex;
         flex-direction: column;
+        .blackboard{
+            min-height: 700px;
+        }
     }
 </style>
