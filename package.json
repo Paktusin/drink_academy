@@ -1,0 +1,42 @@
+{
+  "name": "drink_academy",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "bootstrap": "^4.1.3",
+    "vue": "^2.5.17",
+    "vuex": "^3.0.1"
+  },
+  "devDependencies": {
+    "babel-core": "latest",
+    "babel-loader": "latest",
+    "babel-polyfill": "latest",
+    "babel-preset-env": "latest",
+    "babel-preset-es2015": "latest",
+    "babel-preset-react": "latest",
+    "babel-preset-stage-2": "latest",
+    "clean-webpack-plugin": "latest",
+    "copy-webpack-plugin": "latest",
+    "css-loader": "latest",
+    "file-loader": "latest",
+    "gh-pages": "latest",
+    "html-webpack-plugin": "latest",
+    "mini-css-extract-plugin": "latest",
+    "node-sass": "latest",
+    "optimize-css-assets-webpack-plugin": "latest",
+    "sass-loader": "latest",
+    "style-loader": "latest",
+    "vue-loader": "^15.3.0",
+    "vue-template-compiler": "^2.5.17",
+    "webpack": "latest",
+    "webpack-cli": "latest",
+    "webpack-dev-server": "latest"
+  },
+  "scripts": {
+    "start": "./node_modules/.bin/webpack-dev-server --mode=development",
+    "build": "./node_modules/.bin/webpack --mode=production --progress",
+    "deploy": "gh-pages -d dist"
+  }
+}

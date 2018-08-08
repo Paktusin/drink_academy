@@ -1,0 +1,28 @@
+@font-face {
+  font-family: 'Chalk';
+  src: url(../fonts/Grafipaint.woff) format("woff");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Neon';
+  src: url(../fonts/clip.regular.woff) format("woff");
+  font-weight: normal;
+}
+
+$font-family-base: 'Chalk';
+@import "../../node_modules/bootstrap/scss/bootstrap";
+@import "blackboard";
+@import "neon";
+
+body{
+  background-color: #21150c;
+}
+
+.fade-enter-active, .fade-leave-active{
+  transition: opacity 1s;
+}
+
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+}
