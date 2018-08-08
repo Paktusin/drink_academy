@@ -2,7 +2,7 @@
     <div class="drink">
         <div class="row">
             <div class="col-12 col-md-6 col-lg-4 col-xl-3">
-                <div class="img-container">
+                <div class="img-container stack rotated-left">
                     <img class="img-fluid" v-bind:src="drink.strDrinkThumb"/>
                 </div>
             </div>
@@ -36,6 +36,13 @@
 
 <style lang="scss">
     .drink {
+        @media (max-width: 756px) {
+            .img-container {
+                width: 80%;
+                margin: 1rem auto;
+            }
+        }
+
         font-size: 24pt;
         p {
             margin: 0;

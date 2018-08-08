@@ -14,6 +14,7 @@ $font-family-base: 'Chalk';
 @import "../../node_modules/bootstrap/scss/bootstrap";
 @import "blackboard";
 @import "neon";
+@import "stack";
 
 body{
   background-color: #21150c;
@@ -26,3 +27,4 @@ body{
 .fade-enter, .fade-leave-to {
   opacity: 0;
 }
+

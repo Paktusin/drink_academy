@@ -97,6 +97,11 @@
     }
 
     .App {
+        .col-12{
+            @media (max-width: 756px) {
+                padding: 0;
+            }
+        }
         background-size: cover;
         background-repeat: no-repeat;
         min-height: 100vh;
