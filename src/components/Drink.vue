@@ -36,13 +36,7 @@
 
 <style lang="scss">
     .drink {
-        @media (max-width: 756px) {
-            .img-container {
-                width: 80%;
-                margin: 1rem auto;
-            }
-        }
-
+        word-break: break-all;
         font-size: 24pt;
         p {
             margin: 0;
@@ -51,12 +45,21 @@
             font-size: 2.5em;
             margin: 0;
             line-height: 1em;
+            @media (max-width: 756px) {
+                font-size: 2em;
+                margin: 0;
+                line-height: 1em;
+            }
         }
         h3 {
             margin: 0;
             font-size: 1.5em;
         }
         .img-container {
+            @media (max-width: 756px) {
+                width: 80%;
+                margin: 1rem auto;
+            }
             .img-fluid {
                 max-height: 500px;
             }

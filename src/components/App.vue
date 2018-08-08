@@ -94,6 +94,10 @@
         text-align: center;
         margin-bottom: 1.5rem;
         margin-top: 1rem;
+        @media (max-width: 756px) {
+            font-size: 45pt;
+            line-height: 35pt;
+        }
     }
 
     .App {
