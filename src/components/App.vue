@@ -101,7 +101,7 @@
     }
 
     .App {
-        .col-12{
+        > .container > .row > .col-12 {
             @media (max-width: 756px) {
                 padding: 0;
             }
@@ -111,7 +111,7 @@
         min-height: 100vh;
         display: flex;
         flex-direction: column;
-        .blackboard{
+        .blackboard {
             min-height: 700px;
         }
     }

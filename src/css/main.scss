@@ -1,8 +1,4 @@
-@font-face {
-  font-family: 'Chalk';
-  src: url(../fonts/Grafipaint.woff) format("woff");
-  font-weight: normal;
-}
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower');
 
 @font-face {
   font-family: 'Neon';
@@ -10,17 +6,24 @@
   font-weight: normal;
 }
 
-$font-family-base: 'Chalk';
+$font-family-base: 'Indie Flower';
 @import "../../node_modules/bootstrap/scss/bootstrap";
 @import "blackboard";
 @import "neon";
 @import "stack";
 
-body{
+html {
+  font-size: 18pt;
+  @media (max-width: 576px) {
+    font-size: 16pt;
+  }
+}
+
+body {
   background-color: #21150c;
 }
 
-.fade-enter-active, .fade-leave-active{
+.fade-enter-active, .fade-leave-active {
   transition: opacity 1s;
 }
 
@@ -28,3 +31,7 @@ body{
   opacity: 0;
 }
 
+ul {
+  list-style: none;
+  padding-left: 1rem;
+}
