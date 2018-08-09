@@ -7,7 +7,7 @@
                 </div>
             </div>
             <div class="col-12 col-sm-6 col-md-7 col-lg-8 col-xl-9">
-                <h1 class="title text-center font-weight-bold text-warning">{{drink.strDrink}}</h1>
+                <h1 class="title text-center">{{drink.strDrink}}</h1>
                 <p class="m-0">{{drink.strCategory}}, {{drink.strAlcoholic}}</p>
                 <span>Ingredients:</span>
                 <ul>
