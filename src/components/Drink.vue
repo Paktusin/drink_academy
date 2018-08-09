@@ -21,7 +21,6 @@
                 <p>{{drink.strInstructions}}</p>
             </div>
         </div>
-
     </div>
 </template>
 
@@ -31,7 +30,9 @@
         props: ['drink'],
         methods: {
             ingredients() {
-                return Object.keys(this.drink).filter(key => key.indexOf('strIngredient') !== -1 && this.drink[key] !== null && this.drink[key] !== '').map(key => this.drink[key]);
+                return Object.keys(this.drink)
+                    .filter(key => key.indexOf('strIngredient') !== -1 && this.drink[key] !== null && this.drink[key] !== '')
+                    .map(key => `${this.drink[key]}  ${this.drink[key.replace('strIngredient','strMeasure')]}`);
             }
         }
     }

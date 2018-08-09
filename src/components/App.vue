@@ -21,6 +21,11 @@
                             <div class="blackboard">
                                 <div class="p-3">
                                     <Drink v-if="randomDrinks.length > 0" v-bind:drink="randomDrinks[0]"/>
+                                    <div class="text-right">
+                                        <a class="neon neon-btn" v-on:click="getDrink()">
+                                            next random drink
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -76,12 +81,15 @@
                         }, 10000);
                     }, 1000);
                 }
+            },
+            getDrink() {
+                dataService.randomDrinks().then(drinks => {
+                    this.randomDrinks = drinks;
+                })
             }
         },
-        beforeCreate() {
-            dataService.randomDrinks().then(drinks => {
-                this.randomDrinks = drinks;
-            })
+        beforeMount() {
+            this.getDrink()
         }
     }
 </script>
