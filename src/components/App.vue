@@ -1,31 +1,28 @@
 <template>
     <div>
         <Loader v-if="!loaded"/>
-        <div v-if="!loaded" class="mainTitle neon">
-            drink academy
-        </div>
         <transition name="fade">
             <div v-show="loaded" class="App" v-bind:style="{backgroundImage:`url(${backImage})`}">
                 <img style="display: none" v-bind:src="backImage" v-on:load="imgLoad"/>
                 <img style="display: none" v-bind:src="chalk" v-on:load="imgLoad"/>
                 <div class="container">
                     <div class="row">
-                        <div class="col-12">
+                        <div class="col-12 mb-3">
                             <div class="mainTitle neon" v-bind:class="getNeonClass()">
                                 drink academy
+                            </div>
+                            <div class="text-center">
+                                <a class="neon neon-btn random-btn" v-on:click="getDrink()">
+                                    next random drink
+                                </a>
                             </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-12">
                             <div class="blackboard">
-                                <div class="p-3">
+                                <div class="px-3 pb-2">
                                     <Drink v-if="randomDrinks.length > 0" v-bind:drink="randomDrinks[0]"/>
-                                    <div class="text-right">
-                                        <a class="neon neon-btn" v-on:click="getDrink()">
-                                            next random drink
-                                        </a>
-                                    </div>
                                 </div>
                             </div>
                         </div>
