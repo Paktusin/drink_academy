@@ -31,7 +31,7 @@
         props: ['drink'],
         methods: {
             ingredients() {
-                return Object.keys(this.drink).filter(key => key.indexOf('strIngredient') !== -1 && this.drink[key] !== '').map(key => this.drink[key]);
+                return Object.keys(this.drink).filter(key => key.indexOf('strIngredient') !== -1 && this.drink[key] !== null && this.drink[key] !== '').map(key => this.drink[key]);
             }
         }
     }
