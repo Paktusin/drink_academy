@@ -14,7 +14,7 @@
             </div>
             <div class="col-12 col-md-7">
                 <h3 class="text-center m-0">Ingredients:</h3>
-                <div v-for="ing in ingredients()" class="ingredient col-12">
+                <div v-for="ing in ingredients()" class="ingredient">
                     <img class="img-fluid"
                          v-bind:src="`https://www.thecocktaildb.com/images/ingredients/${ing.name}-Small.png`">
                     <span class="name">{{ing.name}} {{ing.doze}}</span>
