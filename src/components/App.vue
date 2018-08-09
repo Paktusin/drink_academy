@@ -21,7 +21,7 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="blackboard">
-                                <div class="px-3 pb-2">
+                                <div class="p-2">
                                     <Drink v-if="randomDrinks.length > 0" v-bind:drink="randomDrinks[0]"/>
                                 </div>
                             </div>
