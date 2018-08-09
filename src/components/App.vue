@@ -97,7 +97,7 @@
         font-size: 65pt;
         line-height: 45pt;
         text-align: center;
-        margin-bottom: 1.5rem;
+        margin-bottom: 1rem;
         margin-top: 1rem;
         @media (max-width: 756px) {
             font-size: 45pt;
